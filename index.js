@@ -22,6 +22,15 @@ $(document).on('keypress',function() {
   }
 });
 
+// detects a touch from a touch screen device
+$(document).on("touchstart",function() {
+  if(!started){
+    $("#level-title").text("Level " + level);
+    next_sequence();
+    started = true;
+  }
+});
+
 // function to store the colors clicked by the users
 $(".btn").click(function(){
 
